@@ -1,0 +1,129 @@
+@import url(../fonts/pretendard.css);
+
+body {
+  margin: 0;
+  font-family: "Pretendard";
+  font-size: 18px;
+}
+
+div,
+input,
+section {
+  box-sizing: border-box;
+}
+input:focus, select:focus {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+p,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+ul,
+li,
+a,
+button {
+  margin: 0;
+  padding: 0;
+  letter-spacing: -0.4px;
+}
+
+button {
+  border: none;
+  padding: 0;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+input, select {
+  font-family: "Pretendard";
+  background: transparent;
+  font-size: 16px;
+
+  &::placeholder {
+    color: #adadad;
+  }
+}
+
+button {
+  font-family: "Pretendard";
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.title {
+  color: #292929;
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 1.6;
+  letter-spacing: -0.04em;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+h1 {
+  font-size: 38px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+h2 {
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #292929;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+h3 {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #343434;
+}
+h4 {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #343434;
+}
+h5 {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+h6 {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+p {
+  font-size: 16px;
+  color: #343434;
+  line-height: 1.2;
+}
+span {
+  font-size: 15px;
+  line-height: 1.2;
+}
+.sm-point {
+  font-size: 18px;
+  color: #2e90ff;
+  font-weight: 600;
+  letter-spacing: -.2px;
+}
+
+/* border: "1px solid #e6e6e6" */
