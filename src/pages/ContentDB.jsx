@@ -161,17 +161,17 @@ const QnADetailTable = styled.table`
         align-content: center;
         padding: 3px;
         background: #fff;
-        
+
         svg {
           width: 18px;
           height: 18px;
         }
 
         &.edit-button {
-          border: 2px solid #2E90FF;
+          border: 2px solid #2e90ff;
         }
         &.delete-button {
-          border: 2px solid #FE575C;
+          border: 2px solid #fe575c;
         }
       }
     }
@@ -190,14 +190,12 @@ const ContentDB = () => {
 
   return (
     <Container>
-      <section>
-        <h2>
-          콘텐츠 통합 DB
-          <span style={{ color: "#999999" }}>
-            * AI 튜터에서 다루는 전체 문제풀 통합 관리 페이지입니다.
-          </span>
-        </h2>
-      </section>
+      <h2>
+        콘텐츠 통합 DB
+        <span style={{ color: "#999999" }}>
+          * AI 튜터에서 다루는 전체 문제풀 통합 관리 페이지입니다.
+        </span>
+      </h2>
 
       <FilterArea>
         <SearchInput placeholder="콘텐츠 고유 코드 혹은 키워드 검색" />

@@ -14,37 +14,49 @@ const BasicTable = styled.table`
 
 const Tr = styled.tr`
   border-bottom: 2px solid #c4e0ff;
+
+  &:last-child td {
+    &:nth-child(1) {
+    border-radius: 0 0 0 10px;
+    }
+    &:last-child {
+        border-radius: 0 0 10px 0;
+    }
+  }
 `;
 
 const Th = styled.th`
-  background: #c4e0ff;
   padding: 12px 8px;
   text-align: center;
   font-weight: 600;
-  border-right: 1px solid #d2d2d2;
-  border-top: none;
+  border: 1px solid #C4E0FF;
+  border-left: none;
   font-size: 16px;
   white-space: nowrap;
   
   &:nth-child(1) {
-    border-left: 1px solid #d2d2d2;
+    border-left: 1px solid #C4E0FF;
+    border-radius: 10px 0 0 0;
+  }
+  &:last-child {
+    border-radius: 0 10px 0 0;
   }
 `;
 
 const Td = styled.td`
   padding: 12px 8px;
   text-align: left;
-  border-bottom: 1px solid #d2d2d2;
-  border-right: 1px solid #d2d2d2;
+  border-bottom: 1px solid #C4E0FF;
+  border-right: 1px solid #C4E0FF;
   text-align: center;
-  font-size: 16px;
+  font-size: 15px;
 
   &:nth-child(1) {
-    border-left: 1px solid #d2d2d2;
+    border-left: 1px solid #C4E0FF;
   }
 `;
 
-const BasicTables = ({ headers, data }) => {
+const BorderTable = ({ headers, data }) => {
   const columns = React.useMemo(
     () =>
       headers.map((header) => ({
@@ -106,4 +118,4 @@ const BasicTables = ({ headers, data }) => {
   );
 };
 
-export default BasicTables;
+export default BorderTable;
