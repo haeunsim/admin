@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const StyledContainer = styled.div`
   width: 100%;
-  padding: 35px 47px;
+  padding: 35px 47px 35px 12px;
 `;
 
 const Container = ({ children }) => {

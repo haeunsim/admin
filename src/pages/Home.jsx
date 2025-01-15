@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import { useSelector } from "react-redux";
-import RightSidebar from "../components/RightSidebar";
 import FrequencySection from "../components/FrequencySection";
 import CSBoardSection from "../components/CSBoardSection";
+import UtilRate from "../components/UtilRate";
 
 const Container = styled.div`
   width: 100%;
@@ -15,23 +15,18 @@ const Flex = styled.div`
   justify-content: space-between;
   width: 100%;
   height: 100%;
-
-  @media screen and (max-width: 1200px) {
-    flex-direction: column;
-  }
 `;
 
 const LeftWrap = styled.div`
-  flex: 0 0 75%;
-  padding: 35px 24px 35px ${(props) => (props.$sidebarOpen ? "24px" : "60px")};
-  transition: padding 0.3s ease-in-out;
+  width: 70%;
+  padding: 35px 24px 35px 0;
   display: flex;
   flex-direction: column;
   gap: 20px;
+`;
 
-  @media screen and (max-width: 1200px) {
-    width: 100%;
-  }
+const RightWrap = styled.div`
+  width: 30%;
 `;
 
 const Home = () => {
@@ -42,9 +37,11 @@ const Home = () => {
       <Flex>
         <LeftWrap $sidebarOpen={isOpen}>
           <FrequencySection />
-          <CSBoardSection/>
+          <CSBoardSection />
         </LeftWrap>
-        <RightSidebar />
+        <RightWrap>
+          <UtilRate />
+        </RightWrap>
       </Flex>
     </Container>
   );

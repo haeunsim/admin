@@ -4,8 +4,6 @@ import { lowFreqData, highFreqData } from "../data/chartData";
 import FrequencyChart from "./FrequencyChart";
 
 const FrequencySection = () => {
-  const chartRef = useRef(null);
-  const chartRef2 = useRef(null);
 
   return (
     <section>
@@ -126,6 +124,10 @@ const Flex = styled.div`
 
 const Item = styled.div`
   width: 50%;
+  
+  @media screen and (max-width: 1200px) {
+    width: 100%;
+  }
 `;
 const TableWrapper = styled.div`
   margin-top: 20px;

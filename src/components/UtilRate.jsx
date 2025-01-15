@@ -48,7 +48,7 @@ const Table = styled.table`
   }
 `;
 
-const RightSidebar = () => {
+const UtilRate = () => {
 
   return (
     <SidebarContainer>
@@ -137,4 +137,4 @@ const RightSidebar = () => {
   );
 };
 
-export default RightSidebar;
+export default UtilRate;
