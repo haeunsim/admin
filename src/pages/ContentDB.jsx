@@ -3,77 +3,13 @@ import Container from "../components/common/Container";
 import SearchInput from "../components/common/SearchInput";
 import styled from "styled-components";
 import Dropdown from "../components/common/Dropdown";
-
-const FilterArea = styled.div`
-  margin-top: 40px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  padding-bottom: 20px;
-  border-bottom: 2px dashed #ddd;
-
-  > div {
-    max-width: 100% !important;
-  }
-`;
-
-const Flex = styled.div`
-  display: flex;
-  gap: 20px;
-  height: 40px;
-`;
-
-const RadioCell = styled.div`
-  border: 1px solid #dadada;
-  border-radius: 8px;
-  width: 100%;
-  padding: 8px 32px;
-  display: flex;
-  align-items: center;
-  gap: 24px;
-  font-size: 16px;
-
-  & input[type="radio"] {
-    appearance: none;
-    width: 16px;
-    height: 16px;
-    border: 2px solid #dadada;
-    border-radius: 50%;
-    margin: 0;
-    cursor: pointer;
-  }
-
-  & input[type="radio"]:checked {
-    border: 2px solid #2e90ff;
-    background: white;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    &::before {
-      content: "";
-      position: absolute;
-      width: 8px;
-      height: 8px;
-      background: #2e90ff;
-      border-radius: 50%;
-    }
-  }
-
-  p,
-  & label {
-    white-space: nowrap;
-  }
-
-  & label {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    cursor: pointer;
-  }
-`;
+import {
+  FilterArea,
+  Flex,
+  RadioCell,
+  ButtonWrap,
+  Button,
+} from "../assets/styles/CommonStyles";
 
 const ContentDBTable = styled.table`
   width: 100%;
@@ -105,25 +41,6 @@ const ContentDBTable = styled.table`
   }
 `;
 
-const ButtonWrap = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: end;
-`;
-
-const Button = styled.button`
-  width: 240px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 16px 0;
-  border-radius: 8px;
-  margin: 20px 0;
-  font-size: 16px;
-  font-weight: 500;
-  color: #292929;
-`;
-
 const QnADetailTable = styled.table`
   width: 100%;
   border-collapse: collapse;
@@ -147,12 +64,7 @@ const QnADetailTable = styled.table`
       padding: 10px;
       color: #292929;
       font-weight: 400;
-      /* border-bottom: 1px solid #dadada;
-      border-right: 1px solid #dadada;
 
-      &:last-child {
-        border-right: none;
-      } */
       button {
         background: transparent;
         border-radius: 50%;
@@ -170,6 +82,7 @@ const QnADetailTable = styled.table`
         &.edit-button {
           border: 2px solid #2e90ff;
         }
+
         &.delete-button {
           border: 2px solid #fe575c;
         }
@@ -189,14 +102,10 @@ const ContentDB = () => {
   ];
 
   return (
-    <Container>
-      <h2>
-        콘텐츠 통합 DB
-        <span style={{ color: "#999999" }}>
-          * AI 튜터에서 다루는 전체 문제풀 통합 관리 페이지입니다.
-        </span>
-      </h2>
-
+    <Container
+      title="콘텐츠 통합 DB"
+      subtitle="AI 튜터에서 다루는 전체 문제풀 통합 관리 페이지입니다."
+    >
       <FilterArea>
         <SearchInput placeholder="콘텐츠 고유 코드 혹은 키워드 검색" />
         <Flex>

@@ -1,104 +1,9 @@
 import React, { useState } from "react";
 import Container from "../components/common/Container";
 import Dropdown from "../components/common/Dropdown";
-import styled from "styled-components";
 import SearchInput from "../components/common/SearchInput";
 import BasicTables from "../components/common/Table/BasicTable";
-
-const FilterArea = styled.div`
-  margin-top: 40px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  padding-bottom: 20px;
-  border-bottom: 2px dashed #ddd;
-
-  > div {
-    max-width: 100% !important;
-  }
-`;
-
-const Flex = styled.div`
-  display: flex;
-  gap: 20px;
-  height: 40px;
-`;
-const RadioCell = styled.div`
-  border: 1px solid #dadada;
-  border-radius: 8px;
-  width: 100%;
-  padding: 8px 32px;
-  display: flex;
-  align-items: center;
-  gap: 24px;
-  font-size: 16px;
-
-  & input[type="radio"] {
-    appearance: none;
-    width: 16px;
-    height: 16px;
-    border: 2px solid #dadada;
-    border-radius: 50%;
-    margin: 0;
-    cursor: pointer;
-  }
-
-  & input[type="radio"]:checked {
-    border: 2px solid #2e90ff;
-    background: white;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    &::before {
-      content: "";
-      position: absolute;
-      width: 8px;
-      height: 8px;
-      background: #2e90ff;
-      border-radius: 50%;
-    }
-  }
-
-  p,
-  & label {
-    white-space: nowrap;
-  }
-
-  & label {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    cursor: pointer;
-  }
-`;
-
-const ButtonWrap = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: end;
-  align-items: center;
-  gap: 10px;
-  
-  span {
-    color: #2E90FF;
-  }
-`;
-
-const Button = styled.button`
-  width: 240px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 16px 0;
-  border-radius: 8px;
-  margin: 20px 0;
-  font-size: 16px;
-  font-weight: 500;
-  color: #292929;
-`;
+import { FilterArea, Flex, RadioCell, ButtonWrap, Button } from "../assets/styles/CommonStyles";
 
 const ContentViewing = () => {
   const [selectedUnit, setSelectedUnit] = useState("");
@@ -164,15 +69,10 @@ const ContentViewing = () => {
   ];
 
   return (
-    <Container>
-      <h2>
-        [커스텀] 열람/복제
-        <span style={{ color: "#999999" }}>
-          * LMS에서 교사가 개별적으로 커스텀 한 채팅수업 콘텐츠를 열람하고, 그
-          중 일부를 선별하여 [콘텐츠 통합 DB]에 업로드 하는 페이지입니다.
-        </span>
-      </h2>
-
+    <Container
+    title="[커스텀] 열람/복제"
+    subtitle="LMS에서 교사가 개별적으로 커스텀 한 채팅수업 콘텐츠를 열람하고, 그 중 일부를 선별하여 [콘텐츠 통합 DB]에 업로드 하는 페이지입니다."
+  >
       <section>
         <FilterArea>
           <SearchInput placeholder="키워드 검색" />

@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import BasicTables from "./common/Table/BasicTable";
+import BasicTable from "./common/Table/BasicTable";
 import classNames from "classnames";
 import { useLocation } from "react-router-dom";
 
@@ -133,7 +133,7 @@ const StudentChatHistory = () => {
             <span className="small-text">(최신순)</span>
           </h4>
           <div>
-            <BasicTables headers={headers} data={data} />
+            <BasicTable headers={headers} data={data} />
           </div>
         </ChatList>
         <ChatContent>
