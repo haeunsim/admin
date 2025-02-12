@@ -2,16 +2,16 @@ import React from "react";
 import Icon from "../components/Icon/Icon";
 
 const MENU_ITEMS = [
-  {
-    key: "home",
-    label: "Home",
-    url: "/home",
-    icon: <Icon name="home" />,
-  },
+  // {
+  //   key: "home",
+  //   label: "Home",
+  //   url: "/home",
+  //   icon: <Icon name="home" />,
+  // },
   {
     key: "account",
     label: "계정 관리",
-    url: "/account",
+    url: "/account/school-registration",
     icon: <Icon name="account" />,
     children: [
       {
@@ -44,7 +44,7 @@ const MENU_ITEMS = [
   {
     key: "content",
     label: "콘텐츠 관리",
-    url: "/content",
+    url: "/content/database",
     icon: <Icon name="contents" />,
     children: [
       {

@@ -15,7 +15,7 @@ const Login = React.lazy(() => import("../pages/Login.jsx"));
 // const ClassChange = React.lazy(() => import("../pages/ClassChange.jsx"));
 const Preparing = React.lazy(() => import("../pages/Preparing.jsx"));
 
-const Home = React.lazy(() => import("../pages/Home.jsx"));
+// const Home = React.lazy(() => import("../pages/Home.jsx"));
 const Account = React.lazy(() => import("../pages/Account.jsx"));
 const SchoolRegistration = React.lazy(() => import("../pages/SchoolRegistration.jsx"));
 const AccountIssuance = React.lazy(() => import("../pages/AccountIssuance.jsx"));
@@ -53,10 +53,10 @@ const AllRoutes = () => {
       element: <PrivateRoute component={VerticalLayout} />,
       // PrivateRoute 는 로그인해야만 진입할 수 있는 페이지들, sidebar가 있는 레이아웃
       children: [
-        {
-          path: "home",
-          element: <LoadComponent component={Home} />,
-        },
+        // {
+        //   path: "home",
+        //   element: <LoadComponent component={Home} />,
+        // },
         {
           path: "account",
           children: [

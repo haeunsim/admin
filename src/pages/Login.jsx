@@ -36,7 +36,7 @@ const Login = () => {
           isAuthenticated: true
         }
       });
-      navigate("/home");
+      navigate("/account/school-registration");
     } else {
       alert("아이디 또는 비밀번호가 일치하지 않습니다.");
     }
