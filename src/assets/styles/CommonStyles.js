@@ -1,12 +1,11 @@
 import styled from "styled-components";
 
 export const FilterArea = styled.div`
-  margin-top: 40px;
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 40px;
   border-bottom: 2px dashed #ddd;
 
   > div {

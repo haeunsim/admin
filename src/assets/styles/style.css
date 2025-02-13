@@ -130,5 +130,15 @@ span {
   letter-spacing: -.2px;
 }
 
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.ant-upload {
+  width: 50px !important;
+  height: 50px !important;
+  font-size: 12px;
+}
 /* border: "1px solid #e6e6e6" */
 /* @media screen and (max-width: 1200px) {} */

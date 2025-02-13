@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import catImg from "../assets/images/Illustration_cat.png";
 import { useSelector } from "react-redux";
@@ -189,10 +189,9 @@ const Step = styled.div`
   }
 `;
 
-const ChatTest = () => {
-  const selectedTest = useSelector((state) => state.test.selectedTest);
+const ChatTest = ({ item }) => {
+  const [selectedTest, setSelectedTest] = useState(true);
 
-  console.log("selectedTest", selectedTest);
   const steps = [
     "채우기",
     "일광욕",
@@ -205,8 +204,7 @@ const ChatTest = () => {
 
   return (
     <section>
-      <h2>사전 테스트</h2>
-
+      {/* <h2>사전 테스트</h2> */}
       {selectedTest ? (
         <ChatContainer>
           <ContentsArea>

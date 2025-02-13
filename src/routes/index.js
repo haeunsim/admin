@@ -23,6 +23,7 @@ const AccountSettings = React.lazy(() => import("../pages/AccountSettings.jsx"))
 const AccountAddition = React.lazy(() => import("../pages/AccountAddition.jsx"));
 const Content = React.lazy(() => import("../pages/Content.jsx"));
 const ContentDB = React.lazy(() => import("../pages/ContentDB.jsx"));
+const ContentDetail = React.lazy(() => import("../pages/ContentDetail.jsx"));
 const ContentCreation = React.lazy(() => import("../pages/ContentCreation.jsx"));
 const ContentViewing = React.lazy(() => import("../pages/ContentViewing.jsx"));
 
@@ -92,6 +93,10 @@ const AllRoutes = () => {
             {
               path: "database",
               element: <LoadComponent component={ContentDB} />,
+            },
+            {
+              path: "detail",
+              element: <LoadComponent component={ContentDetail} />,
             },
             {
               path: "creation",
